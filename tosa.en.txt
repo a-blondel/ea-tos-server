@@ -1,0 +1,5 @@
+﻿ %{START CMD=news TITLE="Welcome" BTN1="OK" BTN1-GOTO="$quit" TELE=TOSVVIEWen %}
+Official servers were shut down.
+
+This is a community run server, please be respectful and have fun !
+%{%}
