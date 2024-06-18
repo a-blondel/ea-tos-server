@@ -9,6 +9,7 @@ RUN npm install --production \
 
 COPY index.js .
 COPY tosa.en.txt .
+COPY ./nwc ./nwc
 
 RUN mkdir certs
 

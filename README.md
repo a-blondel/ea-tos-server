@@ -2,6 +2,8 @@
 
 A mock of EA's ToS designed to access unreachable links for old games
 
+This branch is bundled with a [NWC server](https://github.com/a-blondel/nwc-server), but the HTTPS for NWC can't be supported.
+
 ## Configuration
 
 ### Certificate
