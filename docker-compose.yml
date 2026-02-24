@@ -1,17 +1,6 @@
-version: '3'
 services:
-  tos-http:
+  ea-tos-server:
     build: .
-    image: tos-app
-    command: start-http
+    restart: unless-stopped
     ports:
-      - 80:80
-    volumes:
-      - ./certs:/app/certs
-  tos-https:
-    image: tos-app
-    command: start-https
-    ports:
-      - 443:443
-    volumes:
-      - ./certs:/app/certs
+      - "80:80"
