@@ -1,15 +1,17 @@
 {
-  "name": "ea-tos",
-  "version": "0.1.0",
-  "description": "Mock for EA TOS",
-  "main": "index.js",
+  "name": "ea-tos-server",
+  "version": "1.0.0",
+  "description": "EA content server - TOS, news, FAQ, game files",
+  "main": "app.js",
   "scripts": {
-    "start-http": "node index.js --mode=http",
-    "start-https": "node index.js --mode=https"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": ">=22"
+  },
   "dependencies": {
-    "minimist": "^1.2.8"
+    "express": "^5.1.0"
   }
 }
