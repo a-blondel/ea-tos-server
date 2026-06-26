@@ -38,6 +38,16 @@ app.get("/eaconnect/", (req, res) => {
   serveTextFile(path.join(CONTENT_DIR, "eaconnect.en.txt"), res);
 });
 
+// EA Connect web offer for 2006 (and earlier) SDK dashboards.
+// These games have no EACONNECT_WEBOFFER_URL news attribute; the dashboard
+// resolves the offer URL via GetServerUrl and issues a GET to msgconn.beta.ea.com like:
+//   /easo/cso05/html/espn/espn.jsp?site=easo&lkey=...&lang=en&slus=SLUS_21298&sku=SLUS_21298
+// The cso/game segments differ per title, so match anything under /easo/.
+app.get("/easo/*splat", (req, res) => {
+  // console.log(`Legacy EA Connect web offer request: ${req.originalUrl}`);
+  serveTextFile(path.join(CONTENT_DIR, "eaconnect.en.txt"), res);
+});
+
 // Keep legacy endpoint for backward compatibility
 app.get("/legalapp{/*path}", (req, res) => {
   serveTextFile(path.join(CONTENT_DIR, "tosa.en.txt"), res);
